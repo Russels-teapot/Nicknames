@@ -1,6 +1,10 @@
 import Validator from '../Nicknames';
 
 const validator = new Validator();
+test('no-number name', () => {
+  expect(validator.validateUsername('Blablabla')).toBeTruthy();
+});
+
 test('four-number name', () => {
   expect(validator.validateUsername('Blabla8547bla')).toBeFalsy();
 });
